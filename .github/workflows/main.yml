@@ -149,13 +149,13 @@ jobs:
         ./scripts/nrf52/build-boot.sh
 
     - name: Upload Bootloader
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: mynewt.elf
         path: bin/targets/nrf52_boot/app/@mcuboot/boot/mynewt/mynewt.elf
 
     - name: Upload Bootloader Outputs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: mynewt.zip
         path: bin/targets/nrf52_boot/app/@mcuboot/boot/mynewt/mynewt.*
@@ -169,7 +169,7 @@ jobs:
         ./scripts/build-app.sh
 
     - name: Upload Application Firmware
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: my_sensor_app.elf
         path: bin/targets/nrf52_my_sensor/app/apps/my_sensor_app/my_sensor_app.elf
@@ -180,13 +180,13 @@ jobs:
         ./scripts/nrf52/image-app.sh
 
     - name: Upload Application Firmware Image
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: my_sensor_app.img
         path: bin/targets/nrf52_my_sensor/app/apps/my_sensor_app/my_sensor_app.img
 
     - name: Upload Application Firmware Outputs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: my_sensor_app.zip
         path: bin/targets/nrf52_my_sensor/app/apps/my_sensor_app/my_sensor_app.*
