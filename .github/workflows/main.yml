@@ -10,7 +10,8 @@ on:
   # Run this Workflow when files are updated (Pushed) in this Branch
   push:
     branches: [ master, lvgl, timesync, lvgl-rust, pre-lvgl ]
-    
+  workflow_dispatch:  # <-- enables manual runs
+
 # Steps to run for the Workflow
 jobs:
   build:
